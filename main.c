@@ -1,7 +1,11 @@
 #include "common.h"
 
+void tests() {
+    printf("Tests run here\n");
+}
+
 int main(int argc, char* argv[]) {
-    printf("Hello, World!\n");
+    suite("Test Suite", tests);
 
     return 1;
 }

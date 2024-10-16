@@ -3,4 +3,6 @@
 
 #include <stdio.h>
 
+#include "test/test.h"
+
 #endif
