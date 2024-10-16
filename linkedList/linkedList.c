@@ -48,7 +48,18 @@ void linkedList_push(LinkedList* plist, int val) {
 }
 
 int linkedList_pop(LinkedList* plist) {
-    return 1;
+    Node* tail = plist->tail;
+    int val = tail->val;
+    Node* curr = tail->prev;
+
+    node_reset(tail);
+    free(tail);
+
+    curr->next = NULL;
+    plist->tail = curr;
+    plist->count--;
+
+    return val;
 }
 
 void linkedList_shift(LinkedList* plist, int val) {}
