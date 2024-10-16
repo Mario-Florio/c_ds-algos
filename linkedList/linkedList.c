@@ -62,7 +62,21 @@ int linkedList_pop(LinkedList* plist) {
     return val;
 }
 
-void linkedList_shift(LinkedList* plist, int val) {}
+void linkedList_shift(LinkedList* plist, int val) {
+    Node* pnode = (Node*)malloc(sizeof(Node));
+    node_init(pnode);
+    node_setVal(pnode, val);
+    
+    if (plist->head == NULL) {
+        plist->head = pnode;
+        plist->tail = pnode;
+    } else {
+        Node* oldHead = plist->head;
+        node_link(pnode, oldHead);
+        plist->head = pnode;
+    }
+    plist->count++;
+}
 
 int linkedList_unshift(LinkedList* plist) {
     return 1;
