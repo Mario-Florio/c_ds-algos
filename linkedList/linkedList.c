@@ -25,7 +25,37 @@ int linkedList_access(LinkedList* plist, int idx) {
     return curr->val;
 }
 
-void linkedList_add(LinkedList* plist, int idx, int val) {}
+void linkedList_add(LinkedList* plist, int idx, int val) {
+    if (idx <= 0) return linkedList_shift(plist, val);
+    if (idx >= plist->count) return linkedList_push(plist, val);
+
+    Node* pnode = (Node*)malloc(sizeof(Node));
+    node_init(pnode);
+    node_setVal(pnode, val);
+
+    if (idx > (plist->count / 2)) {
+        Node* curr = plist->tail;
+        for (int i = plist->count; i > idx+1; i--) {
+            curr = curr->prev;
+        }
+        Node* temp = curr->prev;
+        curr->prev = pnode;
+        pnode->next = curr;
+        pnode->prev = temp;
+        temp->next = pnode;
+    } else {
+        Node* curr = plist->head;
+        for (int i = 0; i < idx-1 && plist->count; i++) {
+            curr = curr->next;
+        }
+        Node* temp = curr->next;
+        curr->next = pnode;
+        pnode->prev = curr;
+        pnode->next = temp;
+        temp-> prev = pnode;
+    }
+    plist->count++;
+}
 
 int linkedList_remove(LinkedList* plist, int idx) {
     return 1;
