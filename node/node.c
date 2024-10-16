@@ -7,7 +7,7 @@ void node_init(Node* pnode) {
 }
 
 void node_setVal(Node* pnode, int val) {
-
+    pnode->val = val;
 }
 
 void node_link(Node* head, Node* tail) {
