@@ -27,7 +27,21 @@ int linkedList_remove(LinkedList* plist, int idx) {
     return 1;
 }
 
-void linkedList_push(LinkedList* plist, int val) {}
+void linkedList_push(LinkedList* plist, int val) {
+    Node* pnode = (Node*)malloc(sizeof(Node));
+    node_init(pnode);
+    node_setVal(pnode, val);
+
+    if (plist->head == NULL) {
+        plist->head = pnode;
+        plist->tail = pnode;
+    } else {
+        Node* oldTail = plist->tail;
+        node_link(oldTail, pnode);
+        plist->tail = pnode;
+    }
+    plist->count++;
+}
 
 int linkedList_pop(LinkedList* plist) {
     return 1;
