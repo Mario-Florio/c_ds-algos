@@ -18,7 +18,11 @@ void linkedList_reset(LinkedList* plist) {
 }
 
 int linkedList_access(LinkedList* plist, int idx) {
-    return 1;
+    Node* curr = plist->head;
+    for (int i = 0; i < idx && i < plist->count-1; i++) {
+        curr = curr->next;
+    }
+    return curr->val;
 }
 
 void linkedList_add(LinkedList* plist, int idx, int val) {}
