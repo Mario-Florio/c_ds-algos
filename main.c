@@ -1,12 +1,8 @@
 #include "common.h"
-
-void tests() {
-    it("Passes", 1);
-    it("Fails", 0);
-}
+#include "node/testSuites/testSuites.h"
 
 int main(int argc, char* argv[]) {
-    suite("Test Suite", tests);
+    node_testSuites();
 
     return 1;
 }
