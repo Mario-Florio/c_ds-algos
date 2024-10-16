@@ -79,5 +79,16 @@ void linkedList_shift(LinkedList* plist, int val) {
 }
 
 int linkedList_unshift(LinkedList* plist) {
-    return 1;
+    Node* head = plist->head;
+    int val = head->val;
+    Node* curr = head->next;
+
+    node_reset(head);
+    free(head);
+
+    curr->prev = NULL;
+    plist->head = curr;
+    plist->count--;
+
+    return val;
 }
