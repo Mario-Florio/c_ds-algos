@@ -16,5 +16,5 @@ void node_link(Node* phead, Node* ptail) {
 }
 
 void node_reset(Node* pnode) {
-
+    node_init(pnode);
 }
