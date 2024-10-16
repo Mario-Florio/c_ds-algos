@@ -1,7 +1,8 @@
 #include "common.h"
 
 void tests() {
-    printf("Tests run here\n");
+    it("Passes", 1);
+    it("Fails", 0);
 }
 
 int main(int argc, char* argv[]) {
