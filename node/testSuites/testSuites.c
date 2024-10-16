@@ -11,6 +11,7 @@ void node_testSuites() {
     suite("Set Value:", node_setValTests);
     suite("Link:", node_linkTests);
     suite("Reset:", node_resetTests);
+    printf("\n");
 }
 
 void node_initTests() {
