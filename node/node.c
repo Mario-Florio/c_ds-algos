@@ -10,8 +10,9 @@ void node_setVal(Node* pnode, int val) {
     pnode->val = val;
 }
 
-void node_link(Node* head, Node* tail) {
-
+void node_link(Node* phead, Node* ptail) {
+    phead->next = ptail;
+    ptail->prev = phead;
 }
 
 void node_reset(Node* pnode) {
