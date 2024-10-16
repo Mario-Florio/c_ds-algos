@@ -58,7 +58,38 @@ void linkedList_add(LinkedList* plist, int idx, int val) {
 }
 
 int linkedList_remove(LinkedList* plist, int idx) {
-    return 1;
+    if (idx <= 0) return linkedList_unshift(plist);
+    if (idx >= plist->count) return linkedList_pop(plist);
+
+    Node* targ;
+    if (idx > (plist->count / 2)) {
+        Node* curr = plist->tail;
+        for (int i = plist->count; i > idx+2; i--) {
+            curr = curr->prev;
+        }
+        targ = curr->prev;
+
+        curr->prev = targ->prev;
+        curr->prev->next = curr;
+
+    } else {
+        Node* curr = plist->head;
+        for (int i = 0; i < idx-1; i++) {
+            curr = curr->next;
+        }
+        targ = curr->next;
+
+        curr->next = targ->next;
+        curr->next->prev = curr;
+    }
+    plist->count--;
+
+    int val = targ->val;
+
+    node_reset(targ);
+    free(targ);
+
+    return val;
 }
 
 void linkedList_push(LinkedList* plist, int val) {
