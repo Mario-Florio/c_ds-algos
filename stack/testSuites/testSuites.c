@@ -28,6 +28,8 @@ void stack_peekTests() {
     for (int i = 1; i < 10; i++) stack_push(pstack, i);
 
     it("Returns tail", stack_peek(pstack) == 9);
+
+    stack_reset(pstack);
 }
 
 void stack_pushTests() {
