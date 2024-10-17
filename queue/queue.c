@@ -13,7 +13,7 @@ int queue_access(Queue* pqueue, int idx) {
 }
 
 int queue_peek(Queue* pqueue) {
-    return 0;
+    return pqueue->head->val;
 }
 
 void queue_enqueue(Queue* pqueue, int val) {
