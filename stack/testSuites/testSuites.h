@@ -3,6 +3,7 @@
 
 #include "../../common.h"
 #include "../stack.h"
+#include "../../linkedList/testSuites/tests/tests.h"
 
 void stack_testSuites();
 
