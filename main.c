@@ -4,9 +4,19 @@
 #include "stack/testSuites/testSuites.h"
 
 int main(int argc, char* argv[]) {
-    node_testSuites();
-    linkedList_testSuites();
-    stack_testSuites();
+    int runAll = argc == 1;
+    int runNode = 0;
+    int runLinkedList = 0;
+    int runStack = 0;
+    for (int i = 1; i < argc; i++) {
+        if (strcmp(argv[i], "node") == 0) runNode = 1;
+        if (strcmp(argv[i], "linkedlist") == 0) runLinkedList = 1;
+        if (strcmp(argv[i], "stack") == 0) runStack = 1;
+    }
+
+    if (runAll || runNode) node_testSuites();
+    if (runAll || runLinkedList) linkedList_testSuites();
+    if (runAll || runStack) stack_testSuites();
 
     return 1;
 }
