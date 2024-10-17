@@ -1,8 +1,6 @@
 #ifndef c_dsalgos_linkedlist_node_node_h
 #define c_dsalgos_linkedlist_node_node_h
 
-#include "../../common.h"
-
 typedef struct Node {
     int val;
     struct Node* next;

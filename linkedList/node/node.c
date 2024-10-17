@@ -1,4 +1,5 @@
 #include "node.h"
+#include "../../common.h"
 
 void node_init(Node* pnode) {
     pnode->val = 0;

@@ -1,4 +1,6 @@
-#include "testSuites.h"
+#include "../../common.h"
+#include "../stack.h"
+#include "../../linkedList/testSuites/tests/tests.h"
 
 void stack_accessTests();
 void stack_peekTests();

@@ -1,4 +1,6 @@
-#include "testSuites.h"
+#include "../../common.h"
+#include "../queue.h"
+#include "../../linkedList/testSuites/tests/tests.h"
 
 void queue_accessTests();
 void queue_peekTests();

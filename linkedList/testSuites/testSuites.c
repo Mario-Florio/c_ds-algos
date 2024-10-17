@@ -1,4 +1,6 @@
-#include "testSuites.h"
+#include "../../common.h"
+#include "tests/tests.h"
+#include "../linkedList.h"
 
 void linkedList_accessTests();
 void linkedList_addTests();

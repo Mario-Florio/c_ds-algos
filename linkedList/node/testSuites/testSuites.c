@@ -1,4 +1,5 @@
-#include "testSuites.h"
+#include "../../../common.h"
+#include "../node.h"
 
 void node_initTests();
 void node_setValTests();
