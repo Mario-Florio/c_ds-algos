@@ -13,7 +13,7 @@ int stack_access(Stack* pstack, int idx) {
 }
 
 int stack_peek(Stack* pstack) {
-    return 1;
+    return pstack->tail->val;
 }
 
 void stack_push(Stack* pstack, int val) {
