@@ -2,7 +2,7 @@
 #define c_dsalgos_linkedlist_linkedlist_h
 
 #include "../common.h"
-#include "../node/node.h"
+#include "node/node.h"
 
 typedef struct {
     Node* head;

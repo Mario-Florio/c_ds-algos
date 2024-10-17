@@ -1,5 +1,5 @@
 #include "common.h"
-#include "node/testSuites/testSuites.h"
+#include "linkedList/node/testSuites/testSuites.h"
 #include "linkedList/testSuites/testSuites.h"
 #include "stack/testSuites/testSuites.h"
 #include "queue/testSuites/testSuites.h"
