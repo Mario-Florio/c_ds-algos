@@ -1,6 +1,6 @@
 Compile:
 ```bash
-compile.sh
+sh compile.sh
 ```
 
 Run:
