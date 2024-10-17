@@ -12,6 +12,10 @@ int queue_access(Queue* pqueue, int idx) {
     return linkedList_access(pqueue, idx);
 }
 
+int queue_peek(Queue* pqueue) {
+    return 0;
+}
+
 void queue_enqueue(Queue* pqueue, int val) {
     linkedList_push(pqueue, val);
 }
