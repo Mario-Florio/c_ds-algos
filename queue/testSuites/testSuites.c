@@ -28,10 +28,3 @@ void queue_dequeueTests() {
     Queue queue;
     abstract_linkedList_unshiftTests(&queue, queue_dequeue);
 }
-
-// UTILS
-void fillQueue(Queue* pqueue, int amount) {
-    for (int i = 0; i < amount; i++) {
-        queue_enqueue(pqueue, i+1);
-    }
-}
