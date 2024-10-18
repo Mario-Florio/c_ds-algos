@@ -1,13 +1,11 @@
-#include "../../common.h"
+#include "../../test/test.h"
 #include "../queue.h"
 #include "../../linkedList/testSuites/tests/tests.h"
 
-void queue_accessTests();
-void queue_peekTests();
-void queue_enqueueTests();
-void queue_dequeueTests();
-
-void fillQueue(Queue* queue, int amount);
+static void queue_accessTests();
+static void queue_peekTests();
+static void queue_enqueueTests();
+static void queue_dequeueTests();
 
 void queue_testSuites() {
     printf("==========QUEUE===========\n\n");
@@ -18,12 +16,12 @@ void queue_testSuites() {
     printf("\n");
 }
 
-void queue_accessTests() {
+static void queue_accessTests() {
     Queue queue;
     abstract_linkedList_accessTests(&queue, queue_access);
 }
 
-void queue_peekTests() {
+static void queue_peekTests() {
     Queue queue;
     Queue* pqueue = &queue;
     queue_init(pqueue);
@@ -33,12 +31,12 @@ void queue_peekTests() {
     it("Returns head", queue_peek(pqueue) == 1);
 }
 
-void queue_enqueueTests() {
+static void queue_enqueueTests() {
     Queue queue;
     abstract_linkedList_pushTests(&queue, queue_enqueue);
 }
 
-void queue_dequeueTests() {
+static void queue_dequeueTests() {
     Queue queue;
     abstract_linkedList_unshiftTests(&queue, queue_dequeue);
 }

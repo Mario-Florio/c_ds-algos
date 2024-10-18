@@ -1,13 +1,11 @@
-#include "../../common.h"
+#include "../../test/test.h"
 #include "../stack.h"
 #include "../../linkedList/testSuites/tests/tests.h"
 
-void stack_accessTests();
-void stack_peekTests();
-void stack_pushTests();
-void stack_popTests();
-
-void fillStack(Stack* pstack, int amount);
+static void stack_accessTests();
+static void stack_peekTests();
+static void stack_pushTests();
+static void stack_popTests();
 
 void stack_testSuites() {
     printf("==========STACK===========\n\n");
@@ -18,12 +16,12 @@ void stack_testSuites() {
     printf("\n");
 }
 
-void stack_accessTests() {
+static void stack_accessTests() {
     Stack stack;
     abstract_linkedList_accessTests(&stack, stack_access);
 }
 
-void stack_peekTests() {
+static void stack_peekTests() {
     Stack stack;
     Stack* pstack = &stack;
     stack_init(pstack);
@@ -34,12 +32,12 @@ void stack_peekTests() {
     stack_reset(pstack);
 }
 
-void stack_pushTests() {
+static void stack_pushTests() {
     Stack stack;
     abstract_linkedList_pushTests(&stack, stack_push);
 }
 
-void stack_popTests() {
+static void stack_popTests() {
     Stack stack;
     abstract_linkedList_popTests(&stack, stack_pop);
 }

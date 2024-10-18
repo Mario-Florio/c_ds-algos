@@ -1,6 +1,7 @@
+#include "../../../test/test.h"
 #include "tests.h"
 
-void fillList(LinkedList* plist, int amount);
+static void fillList(LinkedList* plist, int amount);
 
 void abstract_linkedList_accessTests(LinkedList* plist, int (*linkedList_access)(LinkedList* plist, int idx)) {
     linkedList_init(plist);
@@ -117,7 +118,7 @@ void abstract_linkedList_unshiftTests(LinkedList* plist, int (*linkedList_unshif
 }
 
 // UTILS
-void fillList(LinkedList* plist, int amount) {
+static void fillList(LinkedList* plist, int amount) {
     for (int i = 0; i < amount; i++) {
         linkedList_push(plist, i+1);
     }

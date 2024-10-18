@@ -1,6 +1,6 @@
 #include "test.h"
 
-void printName(char* name);
+static void printName(char* name);
 
 void suite(char* name, void (*func)()) {
     int nameLength = strlen(name);
@@ -28,7 +28,7 @@ void it(char* name, int condition) {
     printf("\033[1;0m");
 }
 
-void printName(char* name) {
+static void printName(char* name) {
     int nameLength = strlen(name);
     for (int i = 0; i < nameLength; i++) {
         printf("%c", name[i]);

@@ -1,10 +1,10 @@
-#include "../../../common.h"
+#include "../../../test/test.h"
 #include "../node.h"
 
-void node_initTests();
-void node_setValTests();
-void node_linkTests();
-void node_resetTests();
+static void node_initTests();
+static void node_setValTests();
+static void node_linkTests();
+static void node_resetTests();
 
 void node_testSuites() {
     printf("===========NODE===========\n\n");
@@ -15,7 +15,7 @@ void node_testSuites() {
     printf("\n");
 }
 
-void node_initTests() {
+static void node_initTests() {
     Node node;
     node_init(&node);
 
@@ -24,14 +24,14 @@ void node_initTests() {
     it("Initalizes prev to NULL", node.prev == NULL);
 }
 
-void node_setValTests() {
+static void node_setValTests() {
     Node node;
     node_setVal(&node, 7);
 
     it("Sets accurate value", node.val == 7);
 }
 
-void node_linkTests() {
+static void node_linkTests() {
     Node head;
     head.val = 1;
     head.next = NULL;
@@ -48,7 +48,7 @@ void node_linkTests() {
     it("Links head to tail.prev", tail.prev == &head);
 }
 
-void node_resetTests() {
+static void node_resetTests() {
     Node node;
     Node next;
     Node prev;
