@@ -1,6 +1,8 @@
 #include "../common.h"
 #include "linkedList.h"
 
+typedef LinkedList_Node Node;
+
 void linkedList_init(LinkedList* plist) {
     plist->head = NULL;
     plist->tail = NULL;
@@ -11,7 +13,7 @@ void linkedList_reset(LinkedList* plist) {
     Node* curr = plist->head;
     for (int i = 0; i < plist->count; i++) {
         Node* next = curr->next;
-        node_reset(curr);
+        linkedList_node_reset(curr);
         free(curr);
         curr = next;
     }
@@ -31,8 +33,8 @@ void linkedList_add(LinkedList* plist, int idx, int val) {
     if (idx >= plist->count) return linkedList_push(plist, val);
 
     Node* pnode = (Node*)malloc(sizeof(Node));
-    node_init(pnode);
-    node_setVal(pnode, val);
+    linkedList_node_init(pnode);
+    linkedList_node_setVal(pnode, val);
 
     if (idx > (plist->count / 2)) {
         Node* curr = plist->tail;
@@ -87,7 +89,7 @@ int linkedList_remove(LinkedList* plist, int idx) {
 
     int val = targ->val;
 
-    node_reset(targ);
+    linkedList_node_reset(targ);
     free(targ);
 
     return val;
@@ -95,15 +97,15 @@ int linkedList_remove(LinkedList* plist, int idx) {
 
 void linkedList_push(LinkedList* plist, int val) {
     Node* pnode = (Node*)malloc(sizeof(Node));
-    node_init(pnode);
-    node_setVal(pnode, val);
+    linkedList_node_init(pnode);
+    linkedList_node_setVal(pnode, val);
 
     if (plist->head == NULL) {
         plist->head = pnode;
         plist->tail = pnode;
     } else {
         Node* oldTail = plist->tail;
-        node_link(oldTail, pnode);
+        linkedList_node_link(oldTail, pnode);
         plist->tail = pnode;
     }
     plist->count++;
@@ -114,7 +116,7 @@ int linkedList_pop(LinkedList* plist) {
     int val = tail->val;
     Node* curr = tail->prev;
 
-    node_reset(tail);
+    linkedList_node_reset(tail);
     free(tail);
 
     curr->next = NULL;
@@ -126,15 +128,15 @@ int linkedList_pop(LinkedList* plist) {
 
 void linkedList_shift(LinkedList* plist, int val) {
     Node* pnode = (Node*)malloc(sizeof(Node));
-    node_init(pnode);
-    node_setVal(pnode, val);
+    linkedList_node_init(pnode);
+    linkedList_node_setVal(pnode, val);
     
     if (plist->head == NULL) {
         plist->head = pnode;
         plist->tail = pnode;
     } else {
         Node* oldHead = plist->head;
-        node_link(pnode, oldHead);
+        linkedList_node_link(pnode, oldHead);
         plist->head = pnode;
     }
     plist->count++;
@@ -145,7 +147,7 @@ int linkedList_unshift(LinkedList* plist) {
     int val = head->val;
     Node* curr = head->next;
 
-    node_reset(head);
+    linkedList_node_reset(head);
     free(head);
 
     curr->prev = NULL;

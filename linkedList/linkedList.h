@@ -4,8 +4,8 @@
 #include "node/node.h"
 
 typedef struct {
-    Node* head;
-    Node* tail;
+    LinkedList_Node* head;
+    LinkedList_Node* tail;
     int count;
 } LinkedList;
 
