@@ -1,5 +1,5 @@
-#ifndef c_dsalgos_test_test_h
-#define c_dsalgos_test_test_h
+#ifndef test_test_h
+#define test_test_h
 
 #include <stdio.h>
 #include <stdlib.h>

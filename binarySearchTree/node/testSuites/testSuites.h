@@ -1,6 +1,0 @@
-#ifndef c_dsalgos_binarysearchtree_node_testSuite_testSuite_h
-#define c_dsalgos_binarysearchtree_node_testSuite_testSuite_h
-
-void binarySearchTree_node_testSuites();
-
-#endif

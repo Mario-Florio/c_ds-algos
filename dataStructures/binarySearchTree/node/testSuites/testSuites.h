@@ -1,0 +1,6 @@
+#ifndef datastructures_binarysearchtree_node_testSuite_testSuite_h
+#define datastructures_binarysearchtree_node_testSuite_testSuite_h
+
+void binarySearchTree_node_testSuites();
+
+#endif

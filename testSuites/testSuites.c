@@ -1,10 +1,10 @@
 #include "../common.h"
-#include "../linkedList/node/testSuites/testSuites.h"
-#include "../linkedList/testSuites/testSuites.h"
-#include "../stack/testSuites/testSuites.h"
-#include "../queue/testSuites/testSuites.h"
-#include "../binarySearchTree/node/testSuites/testSuites.h"
-#include "../binarySearchTree/testSuites/testSuites.h"
+#include "../dataStructures/linkedList/node/testSuites/testSuites.h"
+#include "../dataStructures/linkedList/testSuites/testSuites.h"
+#include "../dataStructures/stack/testSuites/testSuites.h"
+#include "../dataStructures/queue/testSuites/testSuites.h"
+#include "../dataStructures/binarySearchTree/node/testSuites/testSuites.h"
+#include "../dataStructures/binarySearchTree/testSuites/testSuites.h"
 
 void runTestSuites(int argc, char* argv[]) {
     int runAll = argc == 2;

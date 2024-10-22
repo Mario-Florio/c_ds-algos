@@ -1,0 +1,6 @@
+#ifndef datastructures_stack_testsuites_testsuites_h
+#define datastructures_stack_testsuites_testsuites_h
+
+void stack_testSuites();
+
+#endif

@@ -1,0 +1,6 @@
+#ifndef datastructures_linkedlist_testsuites_testsuites_h
+#define datastructures_linkedlist_testsuites_testsuites_h
+
+void linkedList_testSuites();
+
+#endif

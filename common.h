@@ -1,5 +1,5 @@
-#ifndef c_dsalgos_common_h
-#define c_dsalgos_common_h
+#ifndef common_h
+#define common_h
 
 #include <stdio.h>
 #include <stdlib.h>

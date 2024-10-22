@@ -1,5 +1,5 @@
-#ifndef c_dsalgos___utils___trimstring_trimstring_h
-#define c_dsalgos___utils___trimstring_trimstring_h
+#ifndef __utils___trimstring_trimstring_h
+#define __utils___trimstring_trimstring_h
 
 void trimString(char* str);
 

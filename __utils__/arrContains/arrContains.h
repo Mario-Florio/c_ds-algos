@@ -1,5 +1,5 @@
-#ifndef c_dsalgos___utils___arrcontians_arrcontains_h
-#define c_dsalgos___utils___arrcontians_arrcontains_h
+#ifndef __utils___arrcontians_arrcontains_h
+#define __utils___arrcontians_arrcontains_h
 
 int arrContains(int length, char* arr[], char* str);
 
