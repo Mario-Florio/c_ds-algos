@@ -28,23 +28,21 @@ void menu() {
 
     if (fgets(line, sizeof line, stdin) != NULL) {
         trimString(line);
-        if (
-            strcmp(line, "Linked List") == 0 ||
-            strcmp(line, "1") == 0 ||
-            strcmp(line, "ll") == 0
-        ) printf("ll\n");
-        if (
-            strcmp(line, "Stack") == 0 ||
-            strcmp(line, "2") == 0
-        ) printf("s\n");
-        if (
-            strcmp(line, "Queue") == 0 ||
-            strcmp(line, "3") == 0
-        ) printf("q\n");
-                if (
-            strcmp(line, "Binary Search Tree") == 0 ||
-            strcmp(line, "4") == 0 ||
-            strcmp(line, "bst") == 0
-        ) printf("bst\n");
+
+        char* linkedListArgs[] = { "Linked List", "1", "ll" };
+        int linkedListArgsSize = sizeof(linkedListArgs) / sizeof(linkedListArgs[0]);
+        if (arrContains(linkedListArgsSize, linkedListArgs, line)) printf("ll\n");
+
+        char* stackArgs[] = { "Stack", "2" };
+        int stackArgsSize = sizeof(stackArgs) / sizeof(stackArgs[0]);
+        if (arrContains(stackArgsSize, stackArgs, line)) printf("s\n");
+
+        char* queueArgs[] = { "Queue", "3" };
+        int queueArgsSize = sizeof(queueArgs) / sizeof(queueArgs[0]);
+        if (arrContains(queueArgsSize, queueArgs, line)) printf("q\n");
+
+        char* binarySearchTreeArgs[] = { "Binary Search Tree", "4", "bst" };
+        int binarySearchTreeArgsSize = sizeof(binarySearchTreeArgs) / sizeof(binarySearchTreeArgs[0]);
+        if (arrContains(binarySearchTreeArgsSize, binarySearchTreeArgs, line)) printf("bst\n");
     }
 }
