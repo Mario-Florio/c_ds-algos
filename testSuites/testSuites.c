@@ -7,7 +7,7 @@
 #include "../binarySearchTree/testSuites/testSuites.h"
 
 void runTestSuites(int argc, char* argv[]) {
-    int runAll = argc == 1;
+    int runAll = argc == 2;
     int runLinkedListNode = 0;
     int runLinkedList = 0;
     int runStack = 0;
@@ -16,12 +16,12 @@ void runTestSuites(int argc, char* argv[]) {
     int runBinarySearchTree = 0;
     
     for (int i = 1; i < argc; i++) {
-        if (strcmp(argv[i], "linkedListNode") == 0) runLinkedListNode = 1;
-        if (strcmp(argv[i], "linkedlist") == 0) runLinkedList = 1;
+        if (strcmp(argv[i], "llnode") == 0) runLinkedListNode = 1;
+        if (strcmp(argv[i], "ll") == 0) runLinkedList = 1;
         if (strcmp(argv[i], "stack") == 0) runStack = 1;
         if (strcmp(argv[i], "queue") == 0) runQueue = 1;
-        if (strcmp(argv[i], "binarySearchTreeNode") == 0) runBinarySearchTreeNode = 1;
-        if (strcmp(argv[i], "binarySearchTree") == 0) runBinarySearchTree = 1;
+        if (strcmp(argv[i], "bstnode") == 0) runBinarySearchTreeNode = 1;
+        if (strcmp(argv[i], "bst") == 0) runBinarySearchTree = 1;
     }
 
     if (runAll || runLinkedListNode) linkedList_node_testSuites();
