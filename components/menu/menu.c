@@ -3,6 +3,8 @@
 #include "../../__utils__/trimString/trimString.h"
 #include "args.h"
 #include "../linkedList/suite.h"
+#include "../stack/suite.h"
+#include "../queue/suite.h"
 
 static void getInput();
 
@@ -31,9 +33,9 @@ static void getInput() {
 
         if (arrContains(linkedListArgsSize, LINKEDLIST_ARGS, line)) linkedList_suite();
 
-        else if (arrContains(stackArgsSize, STACK_ARGS, line)) printf("s\n");
+        else if (arrContains(stackArgsSize, STACK_ARGS, line)) stack_suite();
 
-        else if (arrContains(queueArgsSize, QUEUE_ARGS, line)) printf("q\n");
+        else if (arrContains(queueArgsSize, QUEUE_ARGS, line)) queue_suite();
 
         else if (arrContains(binarySearchTreeArgsSize, BINARYSEARCHTREE_ARGS, line)) printf("bst\n");
 
