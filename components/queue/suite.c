@@ -55,6 +55,7 @@ static void getInput(Queue* pqueue) {
         } else if (arrContains(resetArgsSize, RESET_ARGS, line)) {
             queue_reset_method(pqueue);
         } else if (arrContains(returnArgsSize, RETURN_ARGS, line)) {
+            queue_reset_method(pqueue);
             return;
         } else {
             printf("\nPlease choose a valid option\n\n");

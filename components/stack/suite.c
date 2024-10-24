@@ -55,6 +55,7 @@ static void getInput(Stack* pstack) {
         } else if (arrContains(resetArgsSize, RESET_ARGS, line)) {
             stack_reset_method(pstack);
         } else if (arrContains(returnArgsSize, RETURN_ARGS, line)) {
+            stack_reset_method(pstack);
             return;
         } else {
             printf("\nPlease choose a valid option\n\n");
