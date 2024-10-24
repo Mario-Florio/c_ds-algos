@@ -9,12 +9,12 @@
 static void getInput();
 
 void menu() {
-    printf("\nWelcome to Data Structures.\n\n");
+    printf("\nWelcome to Data Structures.\n");
     getInput();
 }
 
 static void getInput() {
-    printf("Which data structure would you like to use?\n");
+    printf("\nWhich data structure would you like to use?\n");
     printf("    1. Linked List\n");
     printf("    2. Stack\n");
     printf("    3. Queue\n");
@@ -39,9 +39,8 @@ static void getInput() {
 
         else if (arrContains(binarySearchTreeArgsSize, BINARYSEARCHTREE_ARGS, line)) printf("bst\n");
 
-        else {
-            printf("\nPlease choose a valid option\n\n");
-            getInput();
-        }
+        else printf("\nPlease choose a valid option\n\n");
+
+        getInput();
     }
 }
