@@ -5,5 +5,6 @@
 #define STACK_ARGS (char*[]){ "Stack", "2", "" }
 #define QUEUE_ARGS (char*[]){ "Queue", "3", "q" }
 #define BINARYSEARCHTREE_ARGS (char*[]){ "Binary Search Tree", "4", "bst" }
+#define EXIT_ARGS (char*[]){ "Exit", "5", "e", "X" }
 
 #endif

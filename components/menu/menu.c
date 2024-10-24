@@ -19,6 +19,7 @@ static void getInput() {
     printf("    2. Stack\n");
     printf("    3. Queue\n");
     printf("    4. Binary Search Tree\n");
+    printf("    5. Exit");
     printf("\n");
 
     char line[256];
@@ -30,6 +31,7 @@ static void getInput() {
         int stackArgsSize = sizeof(STACK_ARGS) / sizeof(STACK_ARGS[0]);
         int queueArgsSize = sizeof(QUEUE_ARGS) / sizeof(QUEUE_ARGS[0]);
         int binarySearchTreeArgsSize = sizeof(BINARYSEARCHTREE_ARGS) / sizeof(BINARYSEARCHTREE_ARGS[0]);
+        int exitArgsSize = sizeof(EXIT_ARGS) / sizeof(EXIT_ARGS[0]);
 
         if (arrContains(linkedListArgsSize, LINKEDLIST_ARGS, line)) linkedList_suite();
 
@@ -38,6 +40,11 @@ static void getInput() {
         else if (arrContains(queueArgsSize, QUEUE_ARGS, line)) queue_suite();
 
         else if (arrContains(binarySearchTreeArgsSize, BINARYSEARCHTREE_ARGS, line)) printf("bst\n");
+
+        else if (arrContains(exitArgsSize, EXIT_ARGS, line)) {
+            printf("\nExiting...\n\n");
+            return;
+        }
 
         else printf("\nPlease choose a valid option\n\n");
 
