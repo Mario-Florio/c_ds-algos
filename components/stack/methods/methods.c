@@ -46,7 +46,7 @@ void stack_peek_method(Stack* pstack) {
         finish();
         return;
     }
-    printf("\nTop of stack: %d\n\n", pstack->tail->val);
+    printf("\nTop of stack: %d\n\n", stack_peek(pstack));
     finish();
 }
 
