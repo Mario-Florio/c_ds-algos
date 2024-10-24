@@ -10,6 +10,7 @@ void linkedList_push_method(LinkedList* plist);
 void linkedList_pop_method(LinkedList* plist);
 void linkedList_shift_method(LinkedList* plist);
 void linkedList_unshift_method(LinkedList* plist);
+void linkedList_print_method(LinkedList* plist);
 void linkedList_reset_method(LinkedList* plist);
 
 #endif

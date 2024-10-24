@@ -9,6 +9,7 @@
 #define SHIFT_ARGS (char*[]){ "Shift", "6" }
 #define UNSHIFT_ARGS (char*[]){ "Unshift", "7" }
 #define RESET_ARGS (char*[]){ "Reset", "8" }
-#define RETURN_ARGS (char*[]){ "Return", "9" }
+#define PRINT_ARGS (char*[]){ "Print", "9" }
+#define RETURN_ARGS (char*[]){ "Return", "10" }
 
 #endif

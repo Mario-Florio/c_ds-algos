@@ -23,4 +23,6 @@ int linkedList_pop(LinkedList* plist);
 void linkedList_shift(LinkedList* plist, int val);
 int linkedList_unshift(LinkedList* plist);
 
+void linkedList_print(LinkedList* plist);
+
 #endif

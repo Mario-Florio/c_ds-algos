@@ -1,6 +1,8 @@
 #include "../../../common.h"
 #include "methods.h"
 
+typedef LinkedList_Node Node;
+
 static void finish();
 
 void linkedList_access_method(LinkedList* plist) {
@@ -93,6 +95,19 @@ void linkedList_unshift_method(LinkedList* plist) {
     printf("\033[1;32m"); // green
     printf("\nUnshifted %d from Linked List %p.\n\n", val, plist);
     printf("\033[1;0m");
+    finish();
+}
+
+void linkedList_print_method(LinkedList* plist) {
+    printf("\n");
+    printf("\033[1;32m"); // green
+    printf("Linked List %p\n", plist);
+    printf("Head: %p\n", plist->head);
+    printf("Tail: %p\n", plist->tail);
+    printf("Count: %d\n", plist->count);
+    linkedList_print(plist);
+    printf("\033[1;0m");
+    printf("\n");
     finish();
 }
 

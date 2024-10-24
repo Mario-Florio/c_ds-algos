@@ -163,3 +163,15 @@ int linkedList_unshift(LinkedList* plist) {
 
     return val;
 }
+
+void linkedList_print(LinkedList* plist) {
+    if (!plist->head || !plist->count) return;
+    printf("\n");
+
+    Node* curr = plist->head;
+    while (curr->next) {
+        printf("%d <-> ", curr->val);
+        curr = curr->next;
+    }
+    printf("%d\n", curr->val);
+}
