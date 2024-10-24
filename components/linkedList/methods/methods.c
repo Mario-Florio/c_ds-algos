@@ -1,8 +1,6 @@
 #include "../../../common.h"
 #include "methods.h"
 
-typedef LinkedList_Node Node;
-
 static void finish();
 
 void linkedList_access_method(LinkedList* plist) {
@@ -134,6 +132,7 @@ void linkedList_reset_method(LinkedList* plist) {
     }
 }
 
+// UTILS
 static void finish() {
     printf("Press enter\n");
     scanf("");
