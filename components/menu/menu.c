@@ -2,7 +2,7 @@
 #include "../../__utils__/arrContains/arrContains.h"
 #include "../../__utils__/trimString/trimString.h"
 #include "args.h"
-#include "../linkedList/linkedList.h"
+#include "../linkedList/suite.h"
 
 static void getInput();
 
@@ -29,7 +29,7 @@ static void getInput() {
         int queueArgsSize = sizeof(QUEUE_ARGS) / sizeof(QUEUE_ARGS[0]);
         int binarySearchTreeArgsSize = sizeof(BINARYSEARCHTREE_ARGS) / sizeof(BINARYSEARCHTREE_ARGS[0]);
 
-        if (arrContains(linkedListArgsSize, LINKEDLIST_ARGS, line)) linkedList_run();
+        if (arrContains(linkedListArgsSize, LINKEDLIST_ARGS, line)) linkedList_suite();
 
         else if (arrContains(stackArgsSize, STACK_ARGS, line)) printf("s\n");
 
