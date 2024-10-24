@@ -5,6 +5,7 @@
 #include "../linkedList/suite.h"
 #include "../stack/suite.h"
 #include "../queue/suite.h"
+#include "../binarySearchTree/suite.h"
 
 static void getInput();
 
@@ -43,7 +44,7 @@ static void getInput() {
             queue_suite();
 
         } else if (arrContains(binarySearchTreeArgsSize, BINARYSEARCHTREE_ARGS, line)) {
-            printf("bst\n");
+            binarySearchTree_suite();
 
         } else if (arrContains(exitArgsSize, EXIT_ARGS, line)) {
             printf("\nExiting...\n\n");
