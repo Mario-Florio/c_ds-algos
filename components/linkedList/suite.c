@@ -28,6 +28,7 @@ static void getInput(LinkedList* plist) {
     printf("    6. Shift\n");
     printf("    7. Unshift\n");
     printf("    8. Reset\n");
+    printf("    9. Return to Menu");
     printf("\n");
 
     char line[256];
@@ -43,6 +44,7 @@ static void getInput(LinkedList* plist) {
         int shiftArgsSize = sizeof(SHIFT_ARGS) / sizeof(SHIFT_ARGS[0]);
         int unshiftArgsSize = sizeof(UNSHIFT_ARGS) / sizeof(UNSHIFT_ARGS[0]);
         int resetArgsSize = sizeof(RESET_ARGS) / sizeof(RESET_ARGS[0]);
+        int returnArgsSize = sizeof(RETURN_ARGS) / sizeof(RETURN_ARGS[0]);
 
         if (arrContains(accessArgsSize, ACCESS_ARGS, line)) {
             linkedList_access_method(plist);
@@ -60,6 +62,8 @@ static void getInput(LinkedList* plist) {
             linkedList_unshift_method(plist);
         } else if (arrContains(resetArgsSize, RESET_ARGS, line)) {
             linkedList_reset_method(plist);
+        } else if (arrContains(returnArgsSize, RETURN_ARGS, line)) {
+            return;
         } else {
             printf("\nPlease choose a valid option\n\n");
         }
