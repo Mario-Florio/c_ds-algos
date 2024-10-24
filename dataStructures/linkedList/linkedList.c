@@ -25,7 +25,8 @@ int linkedList_access(LinkedList* plist, int idx) {
     for (int i = 0; i < idx && i < plist->count-1; i++) {
         curr = curr->next;
     }
-    return curr->val;
+    int val = curr ? curr->val : -1;
+    return val;
 }
 
 void linkedList_add(LinkedList* plist, int idx, int val) {
@@ -87,7 +88,7 @@ int linkedList_remove(LinkedList* plist, int idx) {
     }
     plist->count--;
 
-    int val = targ->val;
+    int val = targ->val ? targ->val : -1;
 
     linkedList_node_reset(targ);
     free(targ);
@@ -112,6 +113,7 @@ void linkedList_push(LinkedList* plist, int val) {
 }
 
 int linkedList_pop(LinkedList* plist) {
+    if (!plist->tail) return -1;
     Node* tail = plist->tail;
     int val = tail->val;
     Node* curr = tail->prev;
@@ -143,6 +145,7 @@ void linkedList_shift(LinkedList* plist, int val) {
 }
 
 int linkedList_unshift(LinkedList* plist) {
+    if (!plist->tail) return -1;
     Node* head = plist->head;
     int val = head->val;
     Node* curr = head->next;
