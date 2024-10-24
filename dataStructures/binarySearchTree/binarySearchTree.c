@@ -51,6 +51,7 @@ void binarySearchTree_insert(BinarySearchTree* ptree, int val) {
 }
 
 int binarySearchTree_contains(BinarySearchTree* ptree, int val) {
+    if (!ptree->root || !ptree->count) return 0;
     int contains = 0;
 
     Node* curr = ptree->root;
@@ -86,6 +87,7 @@ int binarySearchTree_contains(BinarySearchTree* ptree, int val) {
 static void traverseAndFree(Node* pnode);
 
 static void freeTree(BinarySearchTree* ptree) {
+    if (!ptree->root) return;
     traverseAndFree(ptree->root);
 }
 
