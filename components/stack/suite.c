@@ -44,19 +44,26 @@ static void getInput(Stack* pstack) {
 
         if (arrContains(accessArgsSize, ACCESS_ARGS, line)) {
             stack_access_method(pstack);
+
         } else if (arrContains(pushArgsSize, PUSH_ARGS, line)) {
             stack_push_method(pstack);
+
         } else if (arrContains(popArgsSize, POP_ARGS, line)) {
             stack_pop_method(pstack);
+
         } else if (arrContains(peekArgsSize, PEEK_ARGS, line)) {
             stack_peek_method(pstack);
+
         } else if (arrContains(printArgsSize, PRINT_ARGS, line)) {
             stack_print_method(pstack);
+
         } else if (arrContains(resetArgsSize, RESET_ARGS, line)) {
             stack_reset_method(pstack);
+
         } else if (arrContains(returnArgsSize, RETURN_ARGS, line)) {
             stack_reset_method(pstack);
             return;
+            
         } else {
             printf("\nPlease choose a valid option\n\n");
         }

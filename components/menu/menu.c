@@ -33,20 +33,25 @@ static void getInput() {
         int binarySearchTreeArgsSize = sizeof(BINARYSEARCHTREE_ARGS) / sizeof(BINARYSEARCHTREE_ARGS[0]);
         int exitArgsSize = sizeof(EXIT_ARGS) / sizeof(EXIT_ARGS[0]);
 
-        if (arrContains(linkedListArgsSize, LINKEDLIST_ARGS, line)) linkedList_suite();
+        if (arrContains(linkedListArgsSize, LINKEDLIST_ARGS, line)) {
+            linkedList_suite();
 
-        else if (arrContains(stackArgsSize, STACK_ARGS, line)) stack_suite();
+        } else if (arrContains(stackArgsSize, STACK_ARGS, line)) {
+            stack_suite();
 
-        else if (arrContains(queueArgsSize, QUEUE_ARGS, line)) queue_suite();
+        } else if (arrContains(queueArgsSize, QUEUE_ARGS, line)) {
+            queue_suite();
 
-        else if (arrContains(binarySearchTreeArgsSize, BINARYSEARCHTREE_ARGS, line)) printf("bst\n");
+        } else if (arrContains(binarySearchTreeArgsSize, BINARYSEARCHTREE_ARGS, line)) {
+            printf("bst\n");
 
-        else if (arrContains(exitArgsSize, EXIT_ARGS, line)) {
+        } else if (arrContains(exitArgsSize, EXIT_ARGS, line)) {
             printf("\nExiting...\n\n");
             return;
+            
+        } else {
+            printf("\nPlease choose a valid option\n\n");
         }
-
-        else printf("\nPlease choose a valid option\n\n");
 
         getInput();
     }

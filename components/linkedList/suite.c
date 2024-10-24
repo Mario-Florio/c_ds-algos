@@ -50,25 +50,35 @@ static void getInput(LinkedList* plist) {
 
         if (arrContains(accessArgsSize, ACCESS_ARGS, line)) {
             linkedList_access_method(plist);
+
         } else if (arrContains(addArgsSize, ADD_ARGS, line)) {
             linkedList_add_method(plist);
+
         } else if (arrContains(removeArgsSize, REMOVE_ARGS, line)) {
             linkedList_remove_method(plist);
+
         } else if (arrContains(pushArgsSize, PUSH_ARGS, line)) {
             linkedList_push_method(plist);
+
         } else if (arrContains(popArgsSize, POP_ARGS, line)) {
             linkedList_pop_method(plist);
+
         } else if (arrContains(shiftArgsSize, SHIFT_ARGS, line)) {
             linkedList_shift_method(plist);
+
         } else if (arrContains(unshiftArgsSize, UNSHIFT_ARGS, line)) {
             linkedList_unshift_method(plist);
+
         } else if (arrContains(printArgsSize, PRINT_ARGS, line)) {
             linkedList_print_method(plist);
+
         } else if (arrContains(resetArgsSize, RESET_ARGS, line)) {
             linkedList_reset_method(plist);
+
         } else if (arrContains(returnArgsSize, RETURN_ARGS, line)) {
             linkedList_reset_method(plist);
             return;
+            
         } else {
             printf("\nPlease choose a valid option\n\n");
         }

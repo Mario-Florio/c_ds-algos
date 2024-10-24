@@ -44,19 +44,26 @@ static void getInput(Queue* pqueue) {
 
         if (arrContains(accessArgsSize, ACCESS_ARGS, line)) {
             queue_access_method(pqueue);
+
         } else if (arrContains(enqueue, ENQUEUE_ARGS, line)) {
             queue_enqueue_method(pqueue);
+
         } else if (arrContains(dequeueArgsSize, DEQUEUE_ARGS, line)) {
             queue_dequeue_method(pqueue);
+
         } else if (arrContains(peekArgsSize, PEEK_ARGS, line)) {
             queue_peek_method(pqueue);
+
         } else if (arrContains(printArgsSize, PRINT_ARGS, line)) {
             queue_print_method(pqueue);
+
         } else if (arrContains(resetArgsSize, RESET_ARGS, line)) {
             queue_reset_method(pqueue);
+
         } else if (arrContains(returnArgsSize, RETURN_ARGS, line)) {
             queue_reset_method(pqueue);
             return;
+            
         } else {
             printf("\nPlease choose a valid option\n\n");
         }
