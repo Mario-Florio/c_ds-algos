@@ -1,6 +1,8 @@
 #include "../../common.h"
 #include "../../__utils__/arrContains/arrContains.h"
 #include "../../__utils__/trimString/trimString.h"
+#include "args.h"
+#include "../linkedList/linkedList.h"
 
 static void getInput();
 
@@ -22,25 +24,18 @@ static void getInput() {
     if (fgets(line, sizeof line, stdin) != NULL) {
         trimString(line);
 
-        char* linkedListArgs[] = { "Linked List", "1", "ll" };
-        int linkedListArgsSize = sizeof(linkedListArgs) / sizeof(linkedListArgs[0]);
+        int linkedListArgsSize = sizeof(LINKEDLIST_ARGS) / sizeof(LINKEDLIST_ARGS[0]);
+        int stackArgsSize = sizeof(STACK_ARGS) / sizeof(STACK_ARGS[0]);
+        int queueArgsSize = sizeof(QUEUE_ARGS) / sizeof(QUEUE_ARGS[0]);
+        int binarySearchTreeArgsSize = sizeof(BINARYSEARCHTREE_ARGS) / sizeof(BINARYSEARCHTREE_ARGS[0]);
 
-        char* stackArgs[] = { "Stack", "2" };
-        int stackArgsSize = sizeof(stackArgs) / sizeof(stackArgs[0]);
+        if (arrContains(linkedListArgsSize, LINKEDLIST_ARGS, line)) linkedList_run();
 
-        char* queueArgs[] = { "Queue", "3" };
-        int queueArgsSize = sizeof(queueArgs) / sizeof(queueArgs[0]);
+        else if (arrContains(stackArgsSize, STACK_ARGS, line)) printf("s\n");
 
-        char* binarySearchTreeArgs[] = { "Binary Search Tree", "4", "bst" };
-        int binarySearchTreeArgsSize = sizeof(binarySearchTreeArgs) / sizeof(binarySearchTreeArgs[0]);
+        else if (arrContains(queueArgsSize, QUEUE_ARGS, line)) printf("q\n");
 
-        if (arrContains(linkedListArgsSize, linkedListArgs, line)) printf("ll\n");
-
-        else if (arrContains(stackArgsSize, stackArgs, line)) printf("s\n");
-
-        else if (arrContains(queueArgsSize, queueArgs, line)) printf("q\n");
-
-        else if (arrContains(binarySearchTreeArgsSize, binarySearchTreeArgs, line)) printf("bst\n");
+        else if (arrContains(binarySearchTreeArgsSize, BINARYSEARCHTREE_ARGS, line)) printf("bst\n");
 
         else {
             printf("\nPlease choose a valid option\n\n");
